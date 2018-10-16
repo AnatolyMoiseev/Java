@@ -9,24 +9,24 @@ public class Javelin extends SportsEquipment {
     public Javelin() {}
 
     public int getLength() {
-        return this.length;
+        return length;
     }
 
-    public void setLength(int _length) {
-        this.length = _length;
+    public void setLength(int length) {
+        this.length = length;
     }
 
     @Override
     public void init(Scanner scanner) {
         System.out.print("Введите длину копья: ");
-        this.setLength(scanner.nextInt());
+        setLength(scanner.nextInt());
 
-        this.setSportType("Метание копья");
+        setSportType("Метание копья");
     }
 
     @Override
     public String toString() {
-        return "Копье \nДлина копья: " + this.getLength() + "\nВид спорта: " + this.getSportType();
+        return "Копье \nДлина копья: " + getLength() + "\nВид спорта: " + getSportType();
     }
 
 

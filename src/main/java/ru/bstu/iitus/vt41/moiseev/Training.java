@@ -5,10 +5,10 @@ public abstract class Training extends SportsEquipment{
     private int weight;
 
     public int getWeight() {
-        return this.weight;
+        return weight;
     }
 
-    public void setWeight(int _weight) {
-        this.weight = _weight;
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 }

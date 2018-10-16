@@ -9,23 +9,23 @@ public class Racket extends SportsEquipment{
     public Racket() {}
 
     public int getLength() {
-        return this.length;
+        return length;
     }
 
-    public void setLength(int _length) {
-        this.length = _length;
+    public void setLength(int length) {
+        this.length = length;
     }
 
     @Override
     public void init(Scanner scanner) {
         System.out.print("Введите длину ракетки: ");
-        this.setLength(scanner.nextInt());
+        setLength(scanner.nextInt());
 
-        this.setSportType("Теннис");
+        setSportType("Теннис");
     }
 
     @Override
     public String toString() {
-        return "Ракетка \nДлина ракетки: " + this.getLength() + "\nВид спорта: " + this.getSportType();
+        return "Ракетка \nДлина ракетки: " + getLength() + "\nВид спорта: " + getSportType();
     }
 }

@@ -16,6 +16,6 @@ public class TennisBall extends Ball{
 
     @Override
     public String toString() {
-        return "Мяч \nРадиус мяча: " + this.getRadius() + "\nВид спорта: " + this.getSportType();
+        return "Мяч \nРадиус мяча: " + getRadius() + "\nВид спорта: " + getSportType();
     }
 }

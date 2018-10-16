@@ -25,14 +25,14 @@ public class Application {
                 equipment = new Barbell();
                 break;
             case 8:
-                equipment= new Weight();
+                equipment = new Weight();
                 break;
         }
         return equipment;
     }
 
     public static boolean isTennisEquipment(SportsEquipment equipment) {
-        if (equipment.getSportType() == "Теннис")
+        if (equipment.getSportType().equals("Теннис"))
             return true;
         else
             return false;
@@ -65,7 +65,7 @@ public class Application {
         }
 
         for (int i = 0; i < equipment.length; i++) {
-            System.out.print("\n");
+            System.out.println();
             if (isTennisEquipment(equipment[i]))
                 System.out.print(i + 1 + "-й элемент инвентаря: " + equipment[i].toString() + "\n");
         }

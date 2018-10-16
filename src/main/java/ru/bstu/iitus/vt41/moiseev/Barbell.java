@@ -14,6 +14,6 @@ public class Barbell extends Training {
 
     @Override
     public String toString() {
-        return "Штанга \nВес штанги: " + this.getWeight() + "\nВид спорта: " + this.getSportType();
+        return "Штанга \nВес штанги: " + getWeight() + "\nВид спорта: " + getSportType();
     }
 }

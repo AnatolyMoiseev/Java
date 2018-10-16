@@ -14,6 +14,6 @@ public class Weight extends Training {
 
     @Override
     public String toString() {
-        return "Гиря \nВес гири: " + this.getWeight() + "\nВид спорта: " + this.getSportType();
+        return "Гиря \nВес гири: " + getWeight() + "\nВид спорта: " + getSportType();
     }
 }
