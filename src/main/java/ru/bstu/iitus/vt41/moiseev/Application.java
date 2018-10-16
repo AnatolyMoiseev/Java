@@ -16,20 +16,16 @@ public class Application {
                 equipment = new Javelin();
                 break;
             case 5:
-                Ball ballV = new VolleyballBall();
-                equipment = ballV;
+                equipment = new VolleyballBall();
                 break;
             case 6:
-                Ball ballT = new TennisBall();
-                equipment = ballT;
+                equipment = new TennisBall();
                 break;
             case 7:
-                Training trainingB = new Barbell();
-                equipment = trainingB;
+                equipment = new Barbell();
                 break;
             case 8:
-                Training trainingW = new Weight();
-                equipment = trainingW;
+                equipment= new Weight();
                 break;
         }
         return equipment;
