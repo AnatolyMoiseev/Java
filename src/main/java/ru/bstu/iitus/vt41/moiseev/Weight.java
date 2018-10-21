@@ -1,7 +1,10 @@
 package ru.bstu.iitus.vt41.moiseev;
 
+import lombok.NoArgsConstructor;
+
 import java.util.Scanner;
 
+@NoArgsConstructor
 public class Weight extends Training {
 
     @Override

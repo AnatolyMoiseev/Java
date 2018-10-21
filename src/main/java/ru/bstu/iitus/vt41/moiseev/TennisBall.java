@@ -1,10 +1,11 @@
 package ru.bstu.iitus.vt41.moiseev;
 
+import lombok.NoArgsConstructor;
+
 import java.util.Scanner;
 
+@NoArgsConstructor
 public class TennisBall extends Ball{
-
-    public TennisBall() {}
 
     @Override
     public void init(Scanner scanner) {

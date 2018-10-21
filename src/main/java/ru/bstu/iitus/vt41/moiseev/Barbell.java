@@ -2,6 +2,9 @@ package ru.bstu.iitus.vt41.moiseev;
 
 import java.util.Scanner;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class Barbell extends Training {
 
     @Override
