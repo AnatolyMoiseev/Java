@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class Javelin extends SportsEquipment {
 
     private int length;
+    private int weight;
 
     @Override
     public void init(Scanner scanner) {
