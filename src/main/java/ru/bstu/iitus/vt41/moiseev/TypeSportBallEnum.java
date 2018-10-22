@@ -11,13 +11,13 @@ public enum TypeSportBallEnum {
 
     private int value;
 
-    public static TypeSportBallEnum from(int source) {
+    public static TypeSportBallEnum from(int number) {
         for(TypeSportBallEnum ballEnum : TypeSportBallEnum.values()) {
-            if (source == ballEnum.getValue()) {
+            if (number == ballEnum.getValue()) {
                 return ballEnum;
             }
         }
-        throw new RuntimeException("unable to create type with this number: " + source);
+        throw new RuntimeException("type do not exist with this number: " + number);
     }
 
 }

@@ -11,12 +11,12 @@ public enum TypeSportTrainingEnum {
 
     private int value;
 
-    public static TypeSportTrainingEnum from(int source) {
+    public static TypeSportTrainingEnum from(int number) {
         for(TypeSportTrainingEnum trainingEnum : TypeSportTrainingEnum.values()) {
-            if (source == trainingEnum.getValue()) {
+            if (number == trainingEnum.getValue()) {
                 return trainingEnum;
             }
         }
-        throw new RuntimeException("unable to create type with this number: " + source);
+        throw new RuntimeException("type do not exist with this number: " + number);
     }
 }

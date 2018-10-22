@@ -1,5 +1,6 @@
 package ru.bstu.iitus.vt41.moiseev;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
@@ -80,24 +81,25 @@ public class Application {
 
 
         System.out.print("Введите количество спортивного инвентаря: ");
-        SportsEquipment[] equipment = new SportsEquipment[scanner.nextInt()];
+        int size = scanner.nextInt();
+        ArrayList<SportsEquipment> equipments = new ArrayList<>();
 
         int choice;
 
-        for (int i = 0; i < equipment.length; i++) {
+        for (int i = 0; i < size; i++) {
             do {
                 System.out.println("Выберите тип спортивного инвентаря\n" + "1 - Мяч\n" + "2 - Ракетка\n" + "3 - Метательное копье\n" + "4 - Тренажерный\n");
                 choice = scanner.nextInt();
             } while (choice < 1 || choice > TypeEquipmentEnum.values().length);
 
-            equipment[i] = createEquipment(TypeEquipmentEnum.from(choice));
-            equipment[i].init(scanner);
+            equipments.add(createEquipment(TypeEquipmentEnum.from(choice)));
+            equipments.get(i).init(scanner);
         }
 
-        for (int i = 0; i < equipment.length; i++) {
+        for (int i = 0; i < size; i++) {
             System.out.println();
-            if (isTennisEquipment(equipment[i]))
-                System.out.print(i + 1 + "-й элемент инвентаря: " + equipment[i].toString() + "\n");
+            if (isTennisEquipment(equipments.get(i)))
+                System.out.print(i + 1 + "-й элемент инвентаря: " + equipments.get(i).toString() + "\n");
         }
     }
 }

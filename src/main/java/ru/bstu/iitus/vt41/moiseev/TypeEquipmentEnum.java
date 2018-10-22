@@ -13,15 +13,13 @@ public enum TypeEquipmentEnum {
 
     private int value;
 
-    public static TypeEquipmentEnum from(int source) {
+    public static TypeEquipmentEnum from(int number) {
         for(TypeEquipmentEnum equipmentEnum : TypeEquipmentEnum.values()) {
-            if (source == equipmentEnum.getValue()) {
+            if (number == equipmentEnum.getValue()) {
                 return equipmentEnum;
             }
         }
-        throw new RuntimeException("unable to create type with this number: " + source);
+        throw new RuntimeException("type do not exist with this number: " + number);
     }
-
-
 
 }
