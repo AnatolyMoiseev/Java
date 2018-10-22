@@ -88,7 +88,7 @@ public class Application {
 
         for (int i = 0; i < size; i++) {
             do {
-                System.out.println("Выберите тип спортивного инвентаря\n" + "1 - Мяч\n" + "2 - Ракетка\n" + "3 - Метательное копье\n" + "4 - Тренажерный\n");
+                System.out.println("Выберите тип спортивного инвентаря\n" + TypeEquipmentEnum.showAllTypeEquipmentEnum());
                 choice = scanner.nextInt();
             } while (choice < 1 || choice > TypeEquipmentEnum.values().length);
 
