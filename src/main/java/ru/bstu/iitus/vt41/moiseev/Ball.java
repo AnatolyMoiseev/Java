@@ -11,7 +11,7 @@ public abstract class Ball extends SportsEquipment{
 
     public void init(Scanner scanner) {
         System.out.print("Введите радиус мяча: ");
-        setRadius(scanner.nextInt());
+        this.radius = scanner.nextInt();
     }
 
 }
