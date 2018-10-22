@@ -69,10 +69,7 @@ public class Application {
     }
 
     public static boolean isTennisEquipment(SportsEquipment equipment) {
-        if (equipment.getSportType().equals("Теннис"))
-            return true;
-        else
-            return false;
+        return TypeSportBallEnum.TENNIS.getName().equals(equipment.getSportType());
     }
 
     public static void main(String[] args) {
