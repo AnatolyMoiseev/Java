@@ -93,7 +93,6 @@ public class Application {
             } while (choice < 1 || choice > TypeEquipmentEnum.values().length);
 
             equipments.add(createEquipment(TypeEquipmentEnum.from(choice)));
-            equipments.get(i).init(scanner);
         }
 
         for (int i = 0; i < size; i++) {

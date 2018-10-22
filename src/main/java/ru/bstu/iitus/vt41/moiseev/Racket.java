@@ -1,15 +1,18 @@
 package ru.bstu.iitus.vt41.moiseev;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.Scanner;
 
 @Data
-@NoArgsConstructor
 public class Racket extends SportsEquipment{
 
     private int length;
+
+    public Racket() {
+        Scanner scanner = new Scanner(System.in);
+        init(scanner);
+    }
 
     @Override
     public void init(Scanner scanner) {
