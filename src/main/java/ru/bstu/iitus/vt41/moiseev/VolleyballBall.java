@@ -9,9 +9,7 @@ public class VolleyballBall extends Ball {
 
     @Override
     public void init(Scanner scanner) {
-        System.out.print("Введите радиус мяча: ");
-        setRadius(scanner.nextInt());
-
+        super.init(scanner);
         setSportType("Волейбол");
     }
 
