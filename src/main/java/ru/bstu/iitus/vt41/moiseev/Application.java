@@ -3,6 +3,10 @@ package ru.bstu.iitus.vt41.moiseev;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static ru.bstu.iitus.vt41.moiseev.TypeEquipmentEnum.showAllTypeEquipmentEnum;
+import static ru.bstu.iitus.vt41.moiseev.TypeSportBallEnum.showAllTypeSportBallEnum;
+import static ru.bstu.iitus.vt41.moiseev.TypeSportTrainingEnum.showAllTypeSportTrainingEnum;
+
 public class Application {
 
     public static Ball createBall(TypeSportBallEnum typeBall) {
@@ -52,14 +56,14 @@ public class Application {
                 break;
             case BALL:
                 do {
-                    System.out.print("Мяч для какого вида спорта?\n" + TypeSportBallEnum.showAllTypeSportBallEnum());
+                    System.out.print("Мяч для какого вида спорта?\n" + showAllTypeSportBallEnum());
                     choice = scanner.nextInt();
                 } while (choice < 1 || choice > TypeSportBallEnum.values().length);
                 equipment = createBall(TypeSportBallEnum.from(choice));
                 break;
             case TRAINING:
                 do {
-                    System.out.print("Тренажерный для какого вида спорта?\n" + TypeSportTrainingEnum.showAllTypeSportTrainingEnum());
+                    System.out.print("Тренажерный для какого вида спорта?\n" + showAllTypeSportTrainingEnum());
                     choice = scanner.nextInt();
                 } while (choice < 1 || choice > TypeSportTrainingEnum.values().length);
                 equipment = createTraining(TypeSportTrainingEnum.from(choice));
@@ -85,7 +89,7 @@ public class Application {
 
         for (int i = 0; i < size; i++) {
             do {
-                System.out.println("Выберите тип спортивного инвентаря\n" + TypeEquipmentEnum.showAllTypeEquipmentEnum());
+                System.out.println("Выберите тип спортивного инвентаря\n" + showAllTypeEquipmentEnum());
                 choice = scanner.nextInt();
             } while (choice < 1 || choice > TypeEquipmentEnum.values().length);
 
