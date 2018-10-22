@@ -52,14 +52,14 @@ public class Application {
                 break;
             case BALL:
                 do {
-                    System.out.print("Мяч для какого вида спорта?\n" + "1 - для тенниса\n" + "2 - для волейбола\n");
+                    System.out.print("Мяч для какого вида спорта?\n" + TypeSportBallEnum.showAllTypeSportBallEnum());
                     choice = scanner.nextInt();
                 } while (choice < 1 || choice > TypeSportBallEnum.values().length);
                 equipment = createBall(TypeSportBallEnum.from(choice));
                 break;
             case TRAINING:
                 do {
-                    System.out.print("Тренажерный для какого вида спорта?\n" + "1 - для тяжелой атлетики\n" + "2 - для гиревого спорта\n");
+                    System.out.print("Тренажерный для какого вида спорта?\n" + TypeSportTrainingEnum.showAllTypeSportTrainingEnum());
                     choice = scanner.nextInt();
                 } while (choice < 1 || choice > TypeSportTrainingEnum.values().length);
                 equipment = createTraining(TypeSportTrainingEnum.from(choice));

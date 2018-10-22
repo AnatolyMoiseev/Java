@@ -20,4 +20,12 @@ public enum TypeSportTrainingEnum {
         }
         throw new RuntimeException("type do not exist with this number: " + number);
     }
+
+    public static String showAllTypeSportTrainingEnum() {
+        String result = "";
+        for(TypeSportTrainingEnum sportTrainingEnum : TypeSportTrainingEnum.values()) {
+            result += sportTrainingEnum.id + " - " + sportTrainingEnum.getName() + "\n";
+        }
+        return result;
+    }
 }

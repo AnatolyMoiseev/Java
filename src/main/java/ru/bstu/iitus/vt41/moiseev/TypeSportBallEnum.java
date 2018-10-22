@@ -21,4 +21,12 @@ public enum TypeSportBallEnum {
         throw new RuntimeException("type do not exist with this number: " + number);
     }
 
+    public static String showAllTypeSportBallEnum() {
+        String result = "";
+        for(TypeSportBallEnum sportBallEnum : TypeSportBallEnum.values()) {
+            result += sportBallEnum.id + " - " + sportBallEnum.getName() + "\n";
+        }
+        return result;
+    }
+
 }
