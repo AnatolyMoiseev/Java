@@ -9,9 +9,7 @@ public class Weight extends Training {
 
     @Override
     public void init(Scanner scanner) {
-        System.out.print("Введите вес штанги: ");
-        setWeight(scanner.nextInt());
-
+        super.init(scanner);
         setSportType("Гиревой спорт");
     }
 
