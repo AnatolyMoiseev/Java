@@ -10,7 +10,7 @@ public class TennisBall extends Ball{
     @Override
     public void init(Scanner scanner) {
         super.init(scanner);
-        setSportType("Теннис");
+        super.setSportType("Теннис");
     }
 
     @Override

@@ -10,7 +10,7 @@ public class VolleyballBall extends Ball {
     @Override
     public void init(Scanner scanner) {
         super.init(scanner);
-        setSportType("Волейбол");
+        super.setSportType("Волейбол");
     }
 
     @Override

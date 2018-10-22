@@ -1,8 +1,8 @@
 package ru.bstu.iitus.vt41.moiseev;
 
-import java.util.Scanner;
-
 import lombok.NoArgsConstructor;
+
+import java.util.Scanner;
 
 @NoArgsConstructor
 public class Barbell extends Training {
@@ -10,7 +10,7 @@ public class Barbell extends Training {
     @Override
     public void init(Scanner scanner) {
         super.init(scanner);
-        setSportType("Тяжелая атлетика");
+        super.setSportType("Тяжелая атлетика");
     }
 
     @Override
