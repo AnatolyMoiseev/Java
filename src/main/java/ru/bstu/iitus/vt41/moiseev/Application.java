@@ -1,9 +1,12 @@
 package ru.bstu.iitus.vt41.moiseev;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Application {
+
+    private final static String TENNIS = "Теннис";
 
     public static Ball createBall(TypeSportBallEnum typeBall) {
 
@@ -69,10 +72,7 @@ public class Application {
     }
 
     public static boolean isTennisEquipment(SportsEquipment equipment) {
-        if (equipment.getSportType().equals("Теннис"))
-            return true;
-        else
-            return false;
+        return TENNIS.equals(equipment.getSportType());
     }
 
     public static void main(String[] args) {
@@ -82,7 +82,7 @@ public class Application {
 
         System.out.print("Введите количество спортивного инвентаря: ");
         int size = scanner.nextInt();
-        ArrayList<SportsEquipment> equipments = new ArrayList<>();
+        List<SportsEquipment> equipments = new ArrayList<>();
 
         int choice;
 
