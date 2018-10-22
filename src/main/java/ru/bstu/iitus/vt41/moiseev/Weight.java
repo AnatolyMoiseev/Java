@@ -12,7 +12,7 @@ public class Weight extends Training {
     @Override
     public void init(Scanner scanner) {
         super.init(scanner);
-        super.setSportType("Гиревой спорт");
+        super.setSportType(TypeSportTrainingEnum.WEIGHTLIFTING.getName());
     }
 
     @Override

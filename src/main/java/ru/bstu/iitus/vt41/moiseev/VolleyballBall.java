@@ -12,7 +12,7 @@ public class VolleyballBall extends Ball {
     @Override
     public void init(Scanner scanner) {
         super.init(scanner);
-        super.setSportType("Волейбол");
+        super.setSportType(TypeSportBallEnum.VOLEYBALL.getName());
     }
 
     @Override

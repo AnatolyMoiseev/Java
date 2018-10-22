@@ -19,7 +19,7 @@ public class Javelin extends SportsEquipment {
         System.out.print("Введите длину копья: ");
         setLength(scanner.nextInt());
 
-        setSportType("Метание копья");
+        setSportType(TypeEquipmentEnum.JAVELIN.getName());
     }
 
     @Override

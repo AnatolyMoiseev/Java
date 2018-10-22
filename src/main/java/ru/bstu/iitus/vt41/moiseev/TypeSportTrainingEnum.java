@@ -6,14 +6,15 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum TypeSportTrainingEnum {
-    POWERLIFTING(1),
-    WEIGHTLIFTING(2);
+    POWERLIFTING(1, "Тяжелая атлетика"),
+    WEIGHTLIFTING(2, "Гиревый спорт");
 
-    private int value;
+    private int id;
+    private String name;
 
     public static TypeSportTrainingEnum from(int number) {
         for(TypeSportTrainingEnum trainingEnum : TypeSportTrainingEnum.values()) {
-            if (number == trainingEnum.getValue()) {
+            if (number == trainingEnum.getId()) {
                 return trainingEnum;
             }
         }

@@ -19,7 +19,7 @@ public class Racket extends SportsEquipment{
         System.out.print("Введите длину ракетки: ");
         setLength(scanner.nextInt());
 
-        setSportType("Теннис");
+        setSportType(TypeSportBallEnum.TENNIS.getName());
     }
 
     @Override

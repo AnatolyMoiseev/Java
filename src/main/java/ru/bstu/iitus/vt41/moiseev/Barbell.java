@@ -12,7 +12,7 @@ public class Barbell extends Training {
     @Override
     public void init(Scanner scanner) {
         super.init(scanner);
-        super.setSportType("Тяжелая атлетика");
+        super.setSportType(TypeSportTrainingEnum.POWERLIFTING.getName());
     }
 
     @Override
