@@ -1,6 +1,7 @@
 package ru.bstu.iitus.vt41.moiseev;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import static ru.bstu.iitus.vt41.moiseev.TypeEquipmentEnum.showAllTypeEquipmentEnum;
@@ -8,6 +9,8 @@ import static ru.bstu.iitus.vt41.moiseev.TypeSportBallEnum.showAllTypeSportBallE
 import static ru.bstu.iitus.vt41.moiseev.TypeSportTrainingEnum.showAllTypeSportTrainingEnum;
 
 public class Application {
+
+    private final static String TENNIS = "Теннис";
 
     public static Ball createBall(TypeSportBallEnum typeBall) {
 
@@ -83,7 +86,7 @@ public class Application {
 
         System.out.print("Введите количество спортивного инвентаря: ");
         int size = scanner.nextInt();
-        ArrayList<SportsEquipment> equipments = new ArrayList<>();
+        List<SportsEquipment> equipments = new ArrayList<>();
 
         int choice;
 
