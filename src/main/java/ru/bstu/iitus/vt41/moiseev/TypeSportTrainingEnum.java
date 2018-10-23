@@ -6,17 +6,26 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum TypeSportTrainingEnum {
-    POWERLIFTING(1),
-    WEIGHTLIFTING(2);
+    POWERLIFTING(1, "Тяжелая атлетика"),
+    WEIGHTLIFTING(2, "Гиревый спорт");
 
-    private int value;
+    private int id;
+    private String name;
 
     public static TypeSportTrainingEnum from(int number) {
         for(TypeSportTrainingEnum trainingEnum : TypeSportTrainingEnum.values()) {
-            if (number == trainingEnum.getValue()) {
+            if (number == trainingEnum.getId()) {
                 return trainingEnum;
             }
         }
         throw new RuntimeException("type do not exist with this number: " + number);
+    }
+
+    public static String showAllTypeSportTrainingEnum() {
+        String result = "";
+        for(TypeSportTrainingEnum sportTrainingEnum : TypeSportTrainingEnum.values()) {
+            result += sportTrainingEnum.id + " - " + sportTrainingEnum.getName() + "\n";
+        }
+        return result;
     }
 }

@@ -1,22 +1,25 @@
 package ru.bstu.iitus.vt41.moiseev;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.Scanner;
 
 @Data
-@NoArgsConstructor
 public class Javelin extends SportsEquipment {
 
     private int length;
+
+    public Javelin() {
+        Scanner scanner = new Scanner(System.in);
+        init(scanner);
+    }
 
     @Override
     public void init(Scanner scanner) {
         System.out.print("Введите длину копья: ");
         setLength(scanner.nextInt());
 
-        setSportType("Метание копья");
+        setSportType(TypeEquipmentEnum.JAVELIN.getName());
     }
 
     @Override

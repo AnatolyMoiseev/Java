@@ -2,17 +2,17 @@ package ru.bstu.iitus.vt41.moiseev;
 
 import java.util.Scanner;
 
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
 public class Barbell extends Training {
+
+    public Barbell() {
+        Scanner scanner = new Scanner(System.in);
+        init(scanner);
+    }
 
     @Override
     public void init(Scanner scanner) {
-        System.out.print("Введите вес штанги: ");
-        setWeight(scanner.nextInt());
-
-        setSportType("Тяжелая атлетика");
+        super.init(scanner);
+        super.setSportType(TypeSportTrainingEnum.POWERLIFTING.getName());
     }
 
     @Override

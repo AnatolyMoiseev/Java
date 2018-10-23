@@ -1,18 +1,18 @@
 package ru.bstu.iitus.vt41.moiseev;
 
-import lombok.NoArgsConstructor;
-
 import java.util.Scanner;
 
-@NoArgsConstructor
 public class TennisBall extends Ball{
+
+    public TennisBall() {
+        Scanner scanner = new Scanner(System.in);
+        init(scanner);
+    }
 
     @Override
     public void init(Scanner scanner) {
-        System.out.print("Введите радиус мяча: ");
-        setRadius(scanner.nextInt());
-
-        setSportType("Теннис");
+        super.init(scanner);
+        super.setSportType(TypeSportBallEnum.TENNIS.getName());
     }
 
     @Override

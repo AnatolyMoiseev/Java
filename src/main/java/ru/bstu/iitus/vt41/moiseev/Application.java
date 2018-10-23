@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static ru.bstu.iitus.vt41.moiseev.TypeEquipmentEnum.showAllTypeEquipmentEnum;
+import static ru.bstu.iitus.vt41.moiseev.TypeSportBallEnum.showAllTypeSportBallEnum;
+import static ru.bstu.iitus.vt41.moiseev.TypeSportTrainingEnum.showAllTypeSportTrainingEnum;
+
 public class Application {
 
     private final static String TENNIS = "Теннис";
@@ -55,14 +59,14 @@ public class Application {
                 break;
             case BALL:
                 do {
-                    System.out.print("Мяч для какого вида спорта?\n" + "1 - для тенниса\n" + "2 - для волейбола\n");
+                    System.out.print("Мяч для какого вида спорта?\n" + showAllTypeSportBallEnum());
                     choice = scanner.nextInt();
                 } while (choice < 1 || choice > TypeSportBallEnum.values().length);
                 equipment = createBall(TypeSportBallEnum.from(choice));
                 break;
             case TRAINING:
                 do {
-                    System.out.print("Тренажерный для какого вида спорта?\n" + "1 - для тяжелой атлетики\n" + "2 - для гиревого спорта\n");
+                    System.out.print("Тренажерный для какого вида спорта?\n" + showAllTypeSportTrainingEnum());
                     choice = scanner.nextInt();
                 } while (choice < 1 || choice > TypeSportTrainingEnum.values().length);
                 equipment = createTraining(TypeSportTrainingEnum.from(choice));
@@ -72,7 +76,7 @@ public class Application {
     }
 
     public static boolean isTennisEquipment(SportsEquipment equipment) {
-        return TENNIS.equals(equipment.getSportType());
+        return TypeSportBallEnum.TENNIS.getName().equals(equipment.getSportType());
     }
 
     public static void main(String[] args) {
@@ -88,12 +92,11 @@ public class Application {
 
         for (int i = 0; i < size; i++) {
             do {
-                System.out.println("Выберите тип спортивного инвентаря\n" + "1 - Мяч\n" + "2 - Ракетка\n" + "3 - Метательное копье\n" + "4 - Тренажерный\n");
+                System.out.println("Выберите тип спортивного инвентаря\n" + showAllTypeEquipmentEnum());
                 choice = scanner.nextInt();
             } while (choice < 1 || choice > TypeEquipmentEnum.values().length);
 
             equipments.add(createEquipment(TypeEquipmentEnum.from(choice)));
-            equipments.get(i).init(scanner);
         }
 
         for (int i = 0; i < size; i++) {
