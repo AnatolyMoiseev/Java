@@ -10,8 +10,6 @@ import static ru.bstu.iitus.vt41.moiseev.TypeSportTrainingEnum.showAllTypeSportT
 
 public class Application {
 
-    private final static String TENNIS = "Теннис";
-
     public static Ball createBall(TypeSportBallEnum typeBall) {
 
         Ball ball = null;
@@ -79,14 +77,12 @@ public class Application {
         return TypeSportBallEnum.TENNIS.getName().equals(equipment.getSportType());
     }
 
-    public static void main(String[] args) {
-
+    public static void inputEquipment(List<SportsEquipment> equipment) {
         Scanner scanner = new Scanner(System.in);
-
 
         System.out.print("Введите количество спортивного инвентаря: ");
         int size = scanner.nextInt();
-        List<SportsEquipment> equipments = new ArrayList<>();
+
 
         int choice;
 
@@ -96,13 +92,24 @@ public class Application {
                 choice = scanner.nextInt();
             } while (choice < 1 || choice > TypeEquipmentEnum.values().length);
 
-            equipments.add(createEquipment(TypeEquipmentEnum.from(choice)));
+            equipment.add(createEquipment(TypeEquipmentEnum.from(choice)));
         }
+    }
 
-        for (int i = 0; i < size; i++) {
+    public static void outputTennisEquipment(List<SportsEquipment> equipment) {
+        for (int i = 0; i < equipment.size(); i++) {
             System.out.println();
-            if (isTennisEquipment(equipments.get(i)))
-                System.out.print(i + 1 + "-й элемент инвентаря: " + equipments.get(i).toString() + "\n");
+            if (isTennisEquipment(equipment.get(i)))
+                System.out.print(i + 1 + "-й элемент инвентаря: " + equipment.get(i).toString() + "\n");
         }
+    }
+
+    public static void main(String[] args) {
+
+        List<SportsEquipment> equipments = new ArrayList<>();
+
+        inputEquipment(equipments);
+
+        outputTennisEquipment(equipments);
     }
 }
