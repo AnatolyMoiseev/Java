@@ -11,7 +11,7 @@ public abstract class Training extends SportsEquipment{
 
     @Override
     public void init(Scanner scanner) {
-        System.out.print("Введите вес штанги: ");
+        System.out.print("Введите вес снаряда: ");
         this.weight = scanner.nextInt();
     }
 

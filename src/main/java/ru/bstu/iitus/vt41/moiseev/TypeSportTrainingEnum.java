@@ -6,8 +6,9 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum TypeSportTrainingEnum {
+
     POWERLIFTING(1, "Тяжелая атлетика"),
-    WEIGHTLIFTING(2, "Гиревый спорт");
+    WEIGHTLIFTING(2, "Гиревой спорт");
 
     private int id;
     private String name;
@@ -18,7 +19,7 @@ public enum TypeSportTrainingEnum {
                 return trainingEnum;
             }
         }
-        throw new RuntimeException("type do not exist with this number: " + number);
+        throw new RuntimeException("Не существует типа с данным числом: " + number);
     }
 
     public static String showAllTypeSportTrainingEnum() {

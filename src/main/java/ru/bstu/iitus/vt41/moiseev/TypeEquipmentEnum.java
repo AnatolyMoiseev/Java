@@ -6,6 +6,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public enum TypeEquipmentEnum {
+
     BALL(1, "Мяч"),
     RACKET(2, "Ракетка"),
     JAVELIN(3, "Метательное копье"),
@@ -20,7 +21,7 @@ public enum TypeEquipmentEnum {
                 return equipmentEnum;
             }
         }
-        throw new RuntimeException("type do not exist with this number: " + number);
+        throw new RuntimeException("Не существует типа с данным числом: " + number);
     }
 
     public static String showAllTypeEquipmentEnum() {
