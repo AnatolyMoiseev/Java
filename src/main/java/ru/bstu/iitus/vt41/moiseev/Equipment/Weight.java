@@ -1,4 +1,7 @@
-package ru.bstu.iitus.vt41.moiseev;
+package ru.bstu.iitus.vt41.moiseev.Equipment;
+
+import ru.bstu.iitus.vt41.moiseev.Enums.TypeSportTrainingEnum;
+import ru.bstu.iitus.vt41.moiseev.Equipment.Training;
 
 import java.util.Scanner;
 

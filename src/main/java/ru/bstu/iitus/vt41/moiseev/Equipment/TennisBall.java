@@ -1,10 +1,13 @@
-package ru.bstu.iitus.vt41.moiseev;
+package ru.bstu.iitus.vt41.moiseev.Equipment;
+
+import ru.bstu.iitus.vt41.moiseev.Enums.TypeSportBallEnum;
+import ru.bstu.iitus.vt41.moiseev.Equipment.Ball;
 
 import java.util.Scanner;
 
-public class VolleyballBall extends Ball {
+public class TennisBall extends Ball {
 
-    public VolleyballBall() {
+    public TennisBall() {
         Scanner scanner = new Scanner(System.in);
         init(scanner);
     }
@@ -12,7 +15,7 @@ public class VolleyballBall extends Ball {
     @Override
     public void init(Scanner scanner) {
         super.init(scanner);
-        super.setSportType(TypeSportBallEnum.VOLEYBALL.getName());
+        super.setSportType(TypeSportBallEnum.TENNIS.getName());
     }
 
     @Override

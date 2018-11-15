@@ -1,11 +1,12 @@
-package ru.bstu.iitus.vt41.moiseev;
+package ru.bstu.iitus.vt41.moiseev.Equipment;
 
 import lombok.Data;
+import ru.bstu.iitus.vt41.moiseev.Enums.TypeSportBallEnum;
 
 import java.util.Scanner;
 
 @Data
-public class Racket extends SportsEquipment{
+public class Racket extends SportsEquipment {
 
     private int length;
 

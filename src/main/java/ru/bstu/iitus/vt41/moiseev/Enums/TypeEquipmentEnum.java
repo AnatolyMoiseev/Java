@@ -1,4 +1,4 @@
-package ru.bstu.iitus.vt41.moiseev;
+package ru.bstu.iitus.vt41.moiseev.Enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

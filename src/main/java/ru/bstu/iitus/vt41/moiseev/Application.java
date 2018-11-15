@@ -1,13 +1,19 @@
 package ru.bstu.iitus.vt41.moiseev;
 
+import ru.bstu.iitus.vt41.moiseev.Enums.TypeEquipmentEnum;
+import ru.bstu.iitus.vt41.moiseev.Enums.TypeSportBallEnum;
+import ru.bstu.iitus.vt41.moiseev.Enums.TypeSportTrainingEnum;
+import ru.bstu.iitus.vt41.moiseev.Equipment.SportsEquipment;
+import ru.bstu.iitus.vt41.moiseev.Factory.*;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-import static ru.bstu.iitus.vt41.moiseev.TypeEquipmentEnum.showAllTypeEquipmentEnum;
-import static ru.bstu.iitus.vt41.moiseev.TypeSportBallEnum.showAllTypeSportBallEnum;
-import static ru.bstu.iitus.vt41.moiseev.TypeSportTrainingEnum.showAllTypeSportTrainingEnum;
+import static ru.bstu.iitus.vt41.moiseev.Enums.TypeEquipmentEnum.showAllTypeEquipmentEnum;
+import static ru.bstu.iitus.vt41.moiseev.Enums.TypeSportBallEnum.showAllTypeSportBallEnum;
+import static ru.bstu.iitus.vt41.moiseev.Enums.TypeSportTrainingEnum.showAllTypeSportTrainingEnum;
 
 public class Application {
 
